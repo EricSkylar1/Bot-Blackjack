@@ -11,10 +11,6 @@ body {
     justify-content: center;
 }
 
-.narration {
-    margin: 20px;
-}
-
 .game-container {
     width: 1500px;
     margin: 20px;
@@ -26,21 +22,29 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 20px;
 }
 
-.dealer-container{
-    margin: 100px;
-    width: 50%;
-    height: 50%;
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #004d00;
+    border-style: solid;
+    border-radius: 500px;
+    width: 500px;
+    height: 300px;
 }
 
-.bot-player-container{
-    width: 50%;
-    height: 50%;
+#player-title {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+#dealer-title {
+    margin-top: 10px;
 }
 
 .start-game-button{
-    margin-bottom: 100px;
     padding: 5px;
     cursor: pointer;
 }
