@@ -9,15 +9,25 @@ const deck = [
 // Button Clicked
 document.getElementById("start-game-button").onclick = function() {
     
+    // Create participants
+    const dealer = new Dealer();
+    const player = new Player();
+
     // Create a Deck Copy
     gameDeck = [...deck];
     // Shuffle Deck
     let shuffledDeck = shuffleDeck(gameDeck);
+    updateNarration("Game Starts!")
     // Dealer Deals
-        // Player gets Face Up Card
-        // Dealer get Face Up Card
-        // Player gets Face Up Card
-        // Dealer gets Face Down Card
+
+    // Player gets Face Up Card
+    dealer.dealToPlayer(shuffledDeck, player)   
+    // Dealer get Face Up Card
+    dealer.dealToSelf(shuffledDeck)
+    // Player gets Face Up Card
+    dealer.dealToPlayer(shuffledDeck, player)  
+    // Dealer gets Face Down Card
+    dealer.dealToSelf(shuffledDeck)
 
     // Player Bot starts
         // Evaluate to Hit
@@ -40,4 +50,9 @@ function shuffleDeck(deckToShuffle){
         deckToShuffle[j] = temp
     }
     return deckToShuffle;
+}
+
+function updateNarration(updatedText){
+    const narrationDiv = document.getElementById("narration");
+    narrationDiv.innerText = updatedText;
 }

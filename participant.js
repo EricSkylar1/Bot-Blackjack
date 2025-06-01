@@ -5,6 +5,10 @@ class Participant{
         this.hand = [];
     }
 
+    getCard(card){
+        this.hand.push(card)
+    }
+
     hit(){
 
     }

@@ -1,9 +1,19 @@
 class Dealer extends Participant{
-    constructor(p_type){
+    constructor(){
         super("Dealer") 
     }
 
-    deal_cards(){
-        
+    dealCard(deck){
+        return deck.shift();
+    }
+
+    dealToPlayer(shuffledDeck, player){
+        const card = this.dealCard(shuffledDeck)
+        player.getCard(card)
+    }
+
+    dealToSelf(shuffledDeck){
+        const card = this.dealCard(shuffledDeck)
+        this.hand.getCard(card)
     }
 }

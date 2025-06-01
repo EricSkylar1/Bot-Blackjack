@@ -1,6 +1,5 @@
 class Player extends Participant{
-    constructor(p_type){
+    constructor(){
         super("Player") 
     }
-
 }

@@ -11,6 +11,10 @@ body {
     justify-content: center;
 }
 
+.narration {
+    margin: 20px;
+}
+
 .game-container {
     width: 1500px;
     margin: 20px;

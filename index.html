@@ -8,18 +8,23 @@
 </head>
 <body>
     <div class="game-container">
+        
         <div class="dealer-container">
             <h3>Dealer</h3>
-            <div class="dealer-card-display"></div>
+            <div id="dealer-hand"></div>
         </div>
         <div class="bot-player-container">
-            <div class="player-card-display"></div>
+            <div id="player-hand"></div>
             <h3>Bot Player</h3>
-        </div>  
-        <button id="start-game-button">
+        </div>
+        <div id="narration" class="narration"></div>  
+        <button id="start-game-button" class="start-game-button">
             Start Game
         </button>
     </div>
+    <script src="participant.js"></script>
+    <script src="player.js"></script>
+    <script src="dealer.js"></script>
     <script src="game.js"></script>
 </body>
 </html>
