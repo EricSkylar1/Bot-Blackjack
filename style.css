@@ -44,6 +44,33 @@ body {
     margin-top: 10px;
 }
 
+#player-hand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+#dealer-hand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.card{
+    background-color: white;
+    color: black;
+    height: 25px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
 .start-game-button{
     padding: 5px;
     cursor: pointer;

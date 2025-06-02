@@ -9,11 +9,57 @@ class Dealer extends Participant{
 
     dealToPlayer(shuffledDeck, player){
         const card = this.dealCard(shuffledDeck)
-        player.getCard(card)
+        player.receiveCard(card)
     }
 
     dealToSelf(shuffledDeck){
         const card = this.dealCard(shuffledDeck)
-        this.hand.getCard(card)
+        this.receiveCard(card)
+    }
+
+    calculateInitialScore(){
+        const firstCard = this.getCardInHand()[0];
+        const value = firstCard.slice(0,-1);
+        switch (value) {
+            case "J":
+                this.score += 10;
+                break;
+            case "Q":
+                this.score += 10;
+                break;
+            case "K":
+                this.score += 10;
+                break;
+            case "A":
+                this.score += 11;
+                break;
+            default:
+                this.score += Number(value);
+                break;
+        }
+    }
+
+    calculateFullScore(){
+        this.score = 0
+        for(const card of this.hand){
+            const value = card.slice(0,-1)
+            switch (value) {
+                case "J":
+                    this.score += 10;
+                    break;
+                case "Q":
+                    this.score += 10;
+                    break;
+                case "K":
+                    this.score += 10;
+                    break;
+                case "A":
+                    this.score += 11;
+                    break;
+                default:
+                    this.score += Number(value);
+                    break;
+            }
+        }
     }
 }
